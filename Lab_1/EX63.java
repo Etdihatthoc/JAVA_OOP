@@ -5,7 +5,7 @@ public class EX63 {
     static void Draw()
     {
         Scanner input = new Scanner(System.in);
-        int x = input.nextInt();
+        int n = input.nextInt();
 
         for (int i=1; i<=n ; i++) 
         {
