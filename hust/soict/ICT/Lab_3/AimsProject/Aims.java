@@ -146,7 +146,7 @@ public class Aims {
                                                 }
                                                 break;
                                             case 0:
-                                                System.out.println("Exiting...");
+                                                System.out.println("Exit");
                                                 break;
                                             default:
                                                 System.out.println("Invalid choice. Please choose again.");
@@ -215,7 +215,7 @@ public class Aims {
                                                         cart.filterByTitle(title_4);
                                                         break;
                                                     case 0:
-                                                        System.out.println("Exiting...");
+                                                        System.out.println("Exit");
                                                     default:
                                                         System.out.println("Invalid Option");
                                                 }
@@ -240,7 +240,7 @@ public class Aims {
                                                         cart.viewCart();
                                                         break;
                                                     case 0:
-                                                        System.out.println("Exiting...");
+                                                        System.out.println("Exit");
                                                     default:
                                                         System.out.println("Invalid Option");
                                                 }
@@ -347,7 +347,7 @@ public class Aims {
                 case 3:
                     break;
                 case 0:
-                    System.out.println("Exiting...");
+                    System.out.println("Exit");
                     break;
                 default:
                     System.out.println("Invalid choice. Please choose again.");
@@ -355,7 +355,6 @@ public class Aims {
             }
         } while (c != 0);
         scanner.close();
-        System.out.println("Thank you for using our service");
     }
     
 }
