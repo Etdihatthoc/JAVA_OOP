@@ -1,3 +1,5 @@
+import Media.DigitalVideoDisc;
+
 public class DigitalVideoDisc 
 {
     
@@ -65,6 +67,11 @@ public class DigitalVideoDisc
 
     public float get_cost() {
         return this.cost;
+    }
+
+    public void play() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'play'");
     }
 
 }
