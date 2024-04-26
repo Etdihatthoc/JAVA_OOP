@@ -250,8 +250,8 @@ public class Aims {
                                         case 3: 
                                             System.out.println("Enter the title of the media you want to remove: ");
                                             String title_4 = scanner.nextLine();
-                                            media a = new media(title_4);
-                                            cart.removeMedia(a);
+                                        //media a = new media(title_4);
+                                            cart.removeMedia(title_4);
                                             break;
                                             
                                         case 4: 

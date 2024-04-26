@@ -3,30 +3,14 @@ import java.util.ArrayList;
 import Media.*;
 import java.util.Collections;
 
+import javax.print.attribute.standard.Media;
+
 public class Cart 
 {
     //private int qtyOrdered = 0;
     public static final int MAX_NUMBER_ORDERED = 20;
     private ArrayList<media> itemOrderd = new ArrayList<media>();
     //itemOrdered.ensureCapacity(MAX_NUMBER_ORDERED);
-
-    public void addMedia(media a) {
-        if (itemOrderd.size() == 20) {
-            System.out.println("The cart quantity reach maximum number!");
-        }
-        else {
-            itemOrderd.add(a);
-        }
-    }
-
-    public void removeMedia(media a) {
-        for (media it : itemOrderd) {
-            if (it.getId() == a.getId()) {
-                itemOrderd.remove(a);
-                break;
-            }
-        }
-    }
 
     public float Total_Cost()
     {
@@ -58,16 +42,33 @@ public class Cart
     }
 
     public void filterByTitle(String title) {
-    	for (media m: itemOrderd) {
-    		if (m.getTitle().contains(title)) {
-    			System.out.println(m.toString());
-    		}
-    	}
+        for (media m: itemOrderd) {
+        if (m.getTitle().contains(title)) {
+            System.out.println(m.toString());
+            }
+        }
     }
     public void clearList() {
-    	this.itemOrderd.clear();
+        this.itemOrderd.clear();
     }
 
+    public void addMedia(media media) {
+        this.itemOrderd.add(media);
+    }
+    
+    public media findMediaByTitle(String title) {
+        for (media m:itemOrderd) {
+            if (m.getTitle().compareTo(title) == 0) {return m;	} 
+        }
+        return null;
+    }
+    
+    public void removeMedia(String title) {
+        if (findMediaByTitle(title) != null ) {
+            itemOrderd.remove(findMediaByTitle(title));
+            System.out.println("Delete Item From Cart Successfully");
+        }
+    }
     public void List_of_orders() 
     {    
         System.out.println("***********************CART***********************");

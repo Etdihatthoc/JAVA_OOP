@@ -1,6 +1,6 @@
 package Media;
 import java.util.Comparator;
-public class media {
+public abstract class media {
     
     private	int id;
 	private String title;
