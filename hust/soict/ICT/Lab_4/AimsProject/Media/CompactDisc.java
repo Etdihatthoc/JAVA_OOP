@@ -75,4 +75,16 @@ public class CompactDisc extends Disc implements Playable{
             i.play();
         }
     }
+
+    public StringBuilder playy() {
+        StringBuilder playOutput = new StringBuilder();
+        playOutput.append("CD going to be played:\n");
+        for (Track i : trackList) {
+            playOutput.append("Playing Track: ").append(i.getTitle()).append("\n");
+            playOutput.append("Tracks length: ").append(i.getLength()).append("\n");
+        }
+        //System.out.println(playOutput.toString());
+        return playOutput;
+    }
+    
 }

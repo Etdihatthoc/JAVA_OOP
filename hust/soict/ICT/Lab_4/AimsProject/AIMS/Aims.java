@@ -1,4 +1,4 @@
-
+package AIMS;
 
 import Media.*;
 import java.util.Scanner;

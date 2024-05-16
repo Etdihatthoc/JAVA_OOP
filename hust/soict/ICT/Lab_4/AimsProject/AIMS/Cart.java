@@ -1,3 +1,4 @@
+package AIMS;
 
 import java.util.ArrayList;
 import Media.*;

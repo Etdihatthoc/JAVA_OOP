@@ -1,9 +1,15 @@
+package AIMS;
 
 import java.util.ArrayList;
 import Media.*;
 
 public class Store {
     private ArrayList<media> itemsInStore = new ArrayList<media>();
+
+	public ArrayList<media> getItemsInStore()
+	{
+		return itemsInStore;
+	}
 
     public void addMedia(media disc) 
     {

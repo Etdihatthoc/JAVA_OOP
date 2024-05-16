@@ -50,4 +50,14 @@ public class DigitalVideoDisc extends media implements Playable
         System.out.println("Playing DVD: " + this.getTitle());
         System.out.println("DVD length: " + this.getLength());
     }
+
+    public StringBuilder playy() 
+    {
+        StringBuilder playOutput = new StringBuilder();
+
+        playOutput.append("Playing DVD: ").append(this.getTitle()).append("\n");
+        playOutput.append("DVD length: ").append(this.getLength()).append("\n");
+
+        return playOutput;
+    }
 }
