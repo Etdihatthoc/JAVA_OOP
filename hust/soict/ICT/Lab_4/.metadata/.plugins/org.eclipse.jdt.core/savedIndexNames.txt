@@ -1,0 +1,1 @@
+INDEX VERSION 1.134+D:\JAVA_OOP\JAVA_OOP\hust\soict\ICT\Lab_4\.metadata\.plugins\org.eclipse.jdt.core
