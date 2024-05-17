@@ -1,36 +1,7 @@
-1. What class should implement the Comparable interface?
-While Comparable allows for natural sorting based on a single attribute, using custom comparators gives more flexibility, allowing multiple sorting criteria. However, when a class needs to be sorted by just one attribute, implementing Comparable is suitable.
-
-2. In those classes, how should you implement the compareTo() method to reflect the ordering that we want?
-Implementing Comparable involves overriding the compareTo() method to define the natural ordering of instances. This method should return a negative integer, zero, or a positive integer based on whether the current object is less than, equal to, or greater than the specified object. Utilizing Collections.sort(list) will then apply this natural sorting.
-
-3. Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
-No we can not because implementing Comparable restricts us to a single comparison rule per class. Therefore, we cannot have two distinct ordering rules for instances of the same class using Comparable.
-
-4. Suppose the DVDs have a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
-We can overwrite it like this:
-
-import java.util.Comparator;
-
-@Override
-class CombinedComparator implements Comparator<media> 
-{    
-    public int compare(DVDs a1, DVDs a2) 
-    {
-        if (a1.getTitle().compareTo(a2.getTitle()) != 0) 
-        {
-            return a1.getTitle().compareTo(a2.getTitle());
-        } 
-        else
-        {
-            if (a1 instanceof DVDs && a2 instanceof DVDs) 
-            {
-                return Integer.compare(((DVDs) a1).getLength(), ((DVDs) a2).getLength());
-            } 
-            else 
-            {
-                return Double.compare(a1.getCost(), a2.getCost());
-            }
-        }
-    }
-}
+I. Comparison of Top-Level Containers
+AspectAWTSwingMain WindowFrame: A heavyweight component representing the main window of an application.JFrame: A lightweight container representing a top-level window with decorations such as a title bar, border, and optional menu bar. It supports Swing components and features like pluggable look-and-feel and double buffering.Additional WindowWindow: A top-level container similar to Frame but without a title bar, border, or menu bar. Used for creating additional windows or dialogs.JDialog: Similar to AWT's Window but provides more features and flexibility, including support for Swing components and dialog-specific functionality like modal behavior.Web-based ApplicationApplet: A container for web applications. Runs in a browser or applet viewer with security restrictions.JApplet: The Swing equivalent of Applet, allowing the inclusion of Swing components in a web-based environment. It is lightweight.II. Comparison of Component Class Names
+FunctionAWT ClassSwing ClassButtonButtonJButtonCheckboxCheckboxJCheckBoxChoice (Dropdown)ChoiceJComboBoxLabelLabelJLabelListListJListScroll PaneScrollPaneJScrollPaneScroll BarScrollbarJScrollBarText AreaTextAreaJTextAreaText FieldTextFieldJTextFieldPanelPanelJPanelFrameFrameJFrameWindow (Dialog)WindowJDialogMenuMenuJMenuMenu BarMenuBarJMenuBarMenu ItemMenuItemJMenuItemPopup MenuPopupMenuJPopupMenuText ComponentTextComponentJTextComponent (ancestor class for JTextArea, JTextField, etc.)DialogDialogJDialogIII. Comparison of Event-Handling
+AspectAWTSwingModelDelegation event model: Event handling is done by delegation. Components have corresponding listener interfaces (e.g., ActionListener, MouseListener).Listener model: Similar to AWT, Swing uses listener interfaces for event handling, providing a rich set of listeners for various events.Anonymous Inner ClassesCommonly used for implementing event listeners, which can make code more compact but may affect readability and maintainability for larger applications.Commonly used, but Swing also supports separate listener classes and lambda expressions (introduced in Java 8) for better readability and maintainability.ConcurrencyTypically uses a single event dispatch thread (EDT) to handle all UI events. Long-running tasks in the EDT can cause UI unresponsiveness.Ensures UI updates and event handling are performed on the EDT. Utilities like SwingUtilities.invokeLater() and SwingWorker help manage concurrency and prevent UI responsiveness issues.Custom EventsCustom event creation is less common.Allows creation of custom events and event listeners, useful for application-specific event handling.Look and FeelLimited customization options.Pluggable look-and-feel architecture allows customization of appearance and behavior independently of the platform, including event handling related to user interactions with GUI components.Summary
+* Top-Level Containers: AWT uses heavyweight Frame and Window, while Swing uses lightweight JFrame and JDialog, which are more feature-rich and flexible.
+* Component Class Names: AWT components have direct counterparts in Swing, typically prefixed with 'J' (e.g., Button vs. JButton).
+* Event Handling: Both use a delegation event model, but Swing offers additional concurrency utilities and supports lambda expressions for better code management. Swing also allows custom events and has a pluggable look-and-feel system for extensive customization.
