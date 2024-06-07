@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane style="-fx-border-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+    <children>
+        <VBox alignment="CENTER" spacing="10" prefWidth="305.0">
+            <children>
+                <Label fx:id="lblTitle" text="Title" />
+                <Label fx:id="lblCost" text="Cost" />
+                <HBox alignment="CENTER" spacing="10">
+                    <children>
+                        <Button fx:id="btnAddToCart" text="Add to Cart" onAction="#btnAddToCartClicked" />
+                        <Button fx:id="btnPlay" text="Play" onAction="#btnPlayClicked" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
