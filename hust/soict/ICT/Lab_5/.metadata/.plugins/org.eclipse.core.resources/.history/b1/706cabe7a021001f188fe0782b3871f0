@@ -1,0 +1,12 @@
+package hust.soict.globalict.aims.screen.customer.controller;
+
+public class ViewStoreController {
+    
+	@FXML
+
+    @FXML
+    void btnViewCartPressed(ActionEvent event) {
+
+    }
+
+}

@@ -1,0 +1,24 @@
+package hust.soict.globalict.aims.screen.customer.controller;
+
+import hust.soict.globalict.aims.store.Store;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+
+public class ViewStoreController {
+	private Store store;
+	
+	public ViewStoreController(Store store) {
+		this.store = store;
+	}
+
+    @FXML
+    void btnViewCartPressed(ActionEvent event) {
+
+    }
+    
+    @FXML
+    public void initialize() {
+    	final String ITEM_FXML_FILE_PATH = "hust/soict/globalict/aims/screen/customer/view/Item.fxml"
+    }
+
+}

@@ -1,0 +1,7 @@
+package hust.soict.globalict.test.screen.customer.store;
+
+import javafx.application.Application;
+
+public class TestViewStoreScreen extends Application {
+	
+}

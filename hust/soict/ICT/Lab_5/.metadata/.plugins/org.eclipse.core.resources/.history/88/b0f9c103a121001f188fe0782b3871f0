@@ -1,0 +1,13 @@
+package hust.soict.globalict.aims.screen.customer.controller;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+
+public class ViewStoreController {
+
+    @FXML
+    void btnViewCartPressed(ActionEvent event) {
+
+    }
+
+}

@@ -1,0 +1,17 @@
+package application;
+
+import javafx.fxml.FXML;
+import javafx.scene.layout.Pane;
+
+public class PleaseProvideControllerClassName {
+
+    @FXML
+    private Pane drawingAreaPane;
+
+    @FXML
+    void clearButtonPressed(ActionEvent event) {
+
+    }
+
+}
+

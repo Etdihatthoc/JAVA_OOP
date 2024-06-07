@@ -1,0 +1,16 @@
+package hust.soict.globalict.aims.exception;
+
+public class PlayerException extends Exception {
+	
+	private String string;
+
+	public PlayerException() {
+		
+	}
+
+	public PlayerException(String string) {
+		super();
+		this.string = string;
+	}
+
+}

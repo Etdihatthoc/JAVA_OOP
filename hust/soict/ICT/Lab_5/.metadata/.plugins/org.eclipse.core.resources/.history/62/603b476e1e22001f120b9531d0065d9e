@@ -1,0 +1,15 @@
+package hust.soict.globalict.aims.exception;
+
+public class PlayerException {
+	
+	private String string;
+
+	public PlayerException() {
+		
+	}
+
+	public PlayerException(String string) {
+		
+	}
+
+}
